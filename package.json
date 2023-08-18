@@ -1,0 +1,33 @@
+{
+  "name": "graphql-to-typescript",
+  "version": "1.0.0",
+  "description": "This tool can generates TS types from GraphQL schema\r ### How to use\r 1. Add the GraphQL schema you want to convert in **input.graphql** file.\r 2. Run `npm run convert` to generate TS types (output will be saved at **./output/index.ts**)",
+  "main": "index.js",
+  "scripts": {
+    "generate": "graphql-codegen --config utils/codegen.yml",
+    "sanitize": "node utils/extractor.js",
+    "start": "npm run generate && npm run sanitize"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aditya-n-suman/graphql-to-typescript.git"
+  },
+  "keywords": [
+    "GraphQL",
+    "TypeScript",
+    "GraphQL schema converter",
+    "TS type extractor from GraphQL schema"
+  ],
+  "author": "Aditya Nath Suman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aditya-n-suman/graphql-to-typescript/issues"
+  },
+  "homepage": "https://github.com/aditya-n-suman/graphql-to-typescript#readme",
+  "devDependencies": {
+    "@graphql-codegen/cli": "^5.0.0",
+    "@graphql-codegen/typescript": "^4.0.1",
+    "@graphql-codegen/typescript-resolvers": "^4.0.1",
+    "graphql": "^16.8.0"
+  }
+}

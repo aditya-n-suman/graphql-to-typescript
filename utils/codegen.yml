@@ -1,0 +1,10 @@
+schema: "./input.graphql"
+generates:
+  ./output/index.ts:
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+    config:
+      useIndexSignature: true
+      scalars:
+        JSON: Record<string, unknown>
